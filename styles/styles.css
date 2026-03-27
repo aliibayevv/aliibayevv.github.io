@@ -1,1 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+/* Ana yapı */
+.wrapper {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar */
+.navbar {
+    height: 10vh;
+    background: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.menu a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+/* Hero */
+.hero {
+    height: 30vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 20px;
+    background: #f4f4f4;
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-image {
+    background: gray;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+/* Kartlar */
+.cards {
+    height: 30vh;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+    background: #ddd;
+}
+
+.card {
+    background: white;
+    flex: 1 1 calc(33% - 10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Flex Grow */
+.grow {
+    height: 20vh;
+    display: flex;
+    align-items: stretch;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.box1 {
+    flex-grow: 1;
+    background: red;
+}
+
+.box2 {
+    flex-grow: 2;
+    background: blue;
+}
+
+.box3 {
+    flex-grow: 1;
+    background: green;
+}
+
+/* Footer */
+.footer {
+    height: 10vh;
+    background: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
