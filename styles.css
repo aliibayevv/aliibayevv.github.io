@@ -1,112 +1,156 @@
-* {
+body {
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    background: #f0f2f5;
 }
 
-/* Ana yapı */
-.wrapper {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
+/* HEADER */
+.main-header {
+    text-align: center;
+    padding: 30px;
+    background: #111;
+    color: white;
 }
 
-/* Navbar */
+/* NAVBAR */
 .navbar {
-    height: 10vh;
-    background: #333;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-}
-
-.menu a {
-    color: white;
-    margin-left: 15px;
-    text-decoration: none;
-}
-
-/* Hero */
-.hero {
-    height: 30vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: stretch;
-    padding: 20px;
-    background: #f4f4f4;
-}
-
-.hero-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.hero-image {
-    background: gray;
-    width: 40%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    color: white;
-}
-
-/* Kartlar */
-.cards {
-    height: 30vh;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+    gap: 20px;
+    background: #222;
     padding: 10px;
-    background: #ddd;
+}
+.navbar a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.navbar a:hover {
+    color: #00bcd4;
+    cursor: pointer;
 }
 
-.card {
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+}
+.btn-main {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.btn-main:hover {
+    background: #0056b3;
+    cursor: pointer;
+}
+
+/* SUB HEADER */
+.sub-header {
+    text-align: center;
+    padding: 20px;
+}
+
+/* RELATIVE CONTAINER */
+.card-container {
+    position: relative;
+    width: 400px;
+    margin: 50px auto;
+}
+
+/* CARD */
+.event-card {
+    position: relative;
     background: white;
-    flex: 1 1 calc(33% - 10px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    overflow: hidden;
+    transition: 0.4s;
 }
 
-/* Flex Grow */
-.grow {
-    height: 20vh;
-    display: flex;
-    align-items: stretch;
+/* HOVER ANIMATION */
+.event-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    cursor: pointer;
 }
 
-.box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* IMAGE */
+.event-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* ABSOLUTE TAGS */
+.tag {
+    position: absolute;
+    background: crimson;
     color: white;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 5px;
+    z-index: 5;
 }
 
-.box1 {
-    flex-grow: 1;
-    background: red;
+.tag1 {
+    top: 10px;
+    left: 10px;
 }
 
-.box2 {
-    flex-grow: 2;
-    background: blue;
+.tag2 {
+    top: 10px;
+    right: 10px;
 }
 
-.box3 {
-    flex-grow: 1;
+.tag3 {
+    bottom: 80px;
+    right: 10px;
+}
+
+/* BUTTON */
+.register-btn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
     background: green;
+    color: white;
+    transition: 0.3s;
 }
 
-/* Footer */
-.footer {
-    height: 10vh;
-    background: black;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* HOVER + ACTIVE */
+.register-btn:hover {
+    background: darkgreen;
+    cursor: pointer;
+}
+.register-btn:active {
+    transform: scale(0.9);
+}
+
+/* FIXED ELEMENT */
+.fixed-banner {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    background: orange;
+    padding: 10px 15px;
+    border-radius: 8px;
+    z-index: 999;
+    animation: pulse 2s infinite;
+}
+
+/* KEYFRAMES ANIMATION */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
 }
