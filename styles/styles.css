@@ -1,142 +1,58 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Ana yapı */
-.wrapper {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-/* Navbar */
-.navbar {
-    height: 10vh;
-    background: #333;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-}
-
-.menu a {
-    color: white;
-    margin-left: 15px;
-    text-decoration: none;
-}
-
-/* Hero */
-.hero {
-    height: 30vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: stretch;
-    padding: 20px;
-    background: #f4f4f4;
-}
-
-.hero-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.hero-image {
-    background: gray;
-    width: 40%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-}
-
-/* Kartlar */
-.cards {
-    height: 30vh;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    padding: 10px;
-    background: #ddd;
-}
-
-.card {
-    background: white;
-    flex: 1 1 calc(33% - 10px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Flex Grow */
-.grow {
-    height: 20vh;
-    display: flex;
-    align-items: stretch;
-}
-
-.box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-}
-
-.box1 {
-    flex-grow: 1;
-    background: red;
-}
-
-.box2 {
-    flex-grow: 2;
-    background: blue;
-}
-
-.box3 {
-    flex-grow: 1;
-    background: green;
-}
-
-/* Footer */
-.footer {
-    height: 10vh;
-    background: black;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
-    background: #f5f5f5;
+    font-family: Arial, sans-serif;
+    background: #f0f2f5;
 }
 
 /* HEADER */
-header {
+.main-header {
     text-align: center;
-    padding: 20px;
+    padding: 30px;
+    background: #111;
+    color: white;
 }
 
-/* ANA BUTON */
-.go-btn {
-    display: block;
-    width: 200px;
-    margin: 50px auto;
-    padding: 15px;
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background: #222;
+    padding: 10px;
+}
+.navbar a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.navbar a:hover {
+    color: #00bcd4;
+    cursor: pointer;
+}
+
+/* HERO */
+.hero {
     text-align: center;
+    padding: 80px 20px;
+}
+.btn-main {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
     background: #007bff;
     color: white;
     text-decoration: none;
     transition: 0.3s;
 }
-.go-btn:hover {
+.btn-main:hover {
     background: #0056b3;
     cursor: pointer;
+}
+
+/* SUB HEADER */
+.sub-header {
+    text-align: center;
+    padding: 20px;
 }
 
 /* RELATIVE CONTAINER */
@@ -147,51 +63,57 @@ header {
 }
 
 /* CARD */
-.card {
+.event-card {
     position: relative;
     background: white;
-    padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    padding: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
     overflow: hidden;
-    transition: transform 0.3s;
+    transition: 0.4s;
 }
 
 /* HOVER ANIMATION */
-.card:hover {
-    transform: scale(1.05);
+.event-card:hover {
+    transform: translateY(-10px) scale(1.02);
     cursor: pointer;
 }
 
-/* ABSOLUTE BADGES */
-.badge {
+/* IMAGE */
+.event-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* ABSOLUTE TAGS */
+.tag {
     position: absolute;
-    padding: 5px 10px;
-    background: red;
+    background: crimson;
     color: white;
-    border-radius: 5px;
+    padding: 5px 10px;
     font-size: 12px;
-    z-index: 2;
+    border-radius: 5px;
+    z-index: 5;
 }
 
-.badge1 {
-    top: -10px;
-    left: -10px;
+.tag1 {
+    top: 10px;
+    left: 10px;
 }
 
-.badge2 {
-    top: -10px;
-    right: -10px;
+.tag2 {
+    top: 10px;
+    right: 10px;
 }
 
-.badge3 {
-    bottom: -10px;
+.tag3 {
+    bottom: 80px;
     right: 10px;
 }
 
 /* BUTTON */
-.btn {
-    margin-top: 20px;
+.register-btn {
+    margin-top: 15px;
     padding: 10px 20px;
     border: none;
     background: green;
@@ -199,30 +121,36 @@ header {
     transition: 0.3s;
 }
 
-.btn:hover {
+/* HOVER + ACTIVE */
+.register-btn:hover {
     background: darkgreen;
     cursor: pointer;
 }
-
-/* ACTIVE EFFECT */
-.btn:active {
+.register-btn:active {
     transform: scale(0.9);
 }
 
 /* FIXED ELEMENT */
-.fixed-box {
+.fixed-banner {
     position: fixed;
-    top: 10px;
-    right: 10px;
+    top: 15px;
+    right: 15px;
     background: orange;
-    padding: 10px;
-    border-radius: 5px;
+    padding: 10px 15px;
+    border-radius: 8px;
     z-index: 999;
+    animation: pulse 2s infinite;
+}
+
+/* KEYFRAMES ANIMATION */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
 }
 
 /* FOOTER */
 footer {
     text-align: center;
     padding: 20px;
-    margin-top: 50px;
 }
