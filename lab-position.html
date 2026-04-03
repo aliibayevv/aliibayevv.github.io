@@ -2,39 +2,41 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>Duyuru Kartı</title>
+    <title>Lab 5 - Duyuru</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <!-- FIXED ELEMENT -->
-<div class="fixed-box">📢 Kayıt Açık!</div>
+<div class="fixed-banner">🔥 Erken Kayıt Açıldı!</div>
 
-<header>
+<header class="sub-header">
     <h2>Üniversite Etkinliği</h2>
 </header>
 
 <!-- RELATIVE CONTAINER -->
-<div class="card-container">
+<section class="card-container">
 
-    <div class="card">
+    <div class="event-card">
+
+        <img src="https://picsum.photos/400/200" alt="event">
 
         <h3>Yazılım Zirvesi 2026</h3>
-        <p>Frontend, AI ve Fintech üzerine dolu dolu bir etkinlik seni bekliyor!</p>
+        <p>Frontend, Yapay Zeka ve Fintech alanlarında uzman konuşmacılarla dolu bir etkinlik seni bekliyor.</p>
 
         <!-- ABSOLUTE ELEMENTS -->
-        <div class="badge badge1">🔥 Popüler</div>
-        <div class="badge badge2">📅 20 Nisan</div>
-        <div class="badge badge3">📍 İstanbul</div>
+        <div class="tag tag1">🔥 Popüler</div>
+        <div class="tag tag2">📅 20 Nisan</div>
+        <div class="tag tag3">📍 İstanbul</div>
 
-        <button class="btn">Kayıt Ol</button>
+        <button class="register-btn">Kayıt Ol</button>
 
     </div>
 
-</div>
+</section>
 
 <footer>
-    <p>© 2026 Ali İbayev</p>
+    <p>© 2026 Ali İbayev | Web Lab 5</p>
 </footer>
 
 </body>
