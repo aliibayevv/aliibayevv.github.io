@@ -1,0 +1,239 @@
+/* ==========================================================
+   Hafta 4 — Flexbox Lab Uygulaması
+   Wrapper 100vh, dikey flex column, alt bölümler vh tabanlı
+   ========================================================== */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background: #e8eaef;
+  font-family: "Segoe UI", Tahoma, Verdana, Arial, sans-serif;
+  color: #1f2530;
+  overflow: hidden;             /* her şey 100vh içine sığar */
+}
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;       /* DİKEY yerleşim - column */
+  background: #f3f5f9;
+}
+
+/* ---- 1) Navbar — 10vh ---- */
+.navbar {
+  height: 10vh;
+  background: #ffffff;
+  border-bottom: 1px solid #d6dae3;
+  padding: 0 32px;
+  display: flex;
+  justify-content: space-between;  /* solda logo, sağda linkler */
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #14182a;
+}
+
+.navbar nav {
+  display: flex;
+  gap: 26px;
+}
+
+.navbar nav a {
+  color: #4a4f5c;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.navbar nav a:hover { color: #2c5cff; }
+
+/* ---- 2) Hero — 30vh, ROW + stretch ---- */
+.hero {
+  height: 30vh;
+  display: flex;
+  flex-direction: row;            /* yatay - row */
+  justify-content: space-between;
+  align-items: stretch;           /* sağdaki görsel kutusu yükseklikte esnesin */
+  padding: 20px 32px;
+  gap: 20px;
+  background: linear-gradient(135deg, #f3f5f9 0%, #eef0f6 100%);
+}
+
+.hero-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-text h1 {
+  font-size: 1.9rem;
+  margin-bottom: 8px;
+  color: #14182a;
+}
+
+.hero-text p {
+  font-size: 0.95rem;
+  color: #5a6172;
+  margin-bottom: 14px;
+  max-width: 38ch;
+}
+
+.btn {
+  align-self: flex-start;
+  display: inline-block;
+  background: #2c5cff;
+  color: white;
+  border: none;
+  padding: 9px 20px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  font-family: inherit;
+  text-decoration: none;
+}
+
+.btn:hover { background: #1746e6; }
+
+.hero-image {
+  flex: 1;
+  background: #e1e6f0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9aa1b3;
+  font-size: 0.9rem;
+}
+
+.hero-image::before {
+  content: "▲ ●";
+  font-size: 2rem;
+  letter-spacing: 0.3em;
+}
+
+/* ---- 3) Kartlar Bölümü — 30vh, wrap, gap ---- */
+.cards {
+  height: 30vh;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  padding: 18px 32px;
+  background: #f3f5f9;
+  align-items: stretch;            /* farklı bir align-items kullanımı */
+  justify-content: flex-start;      /* farklı justify-content */
+}
+
+.card {
+  flex: 1 1 calc(16.66% - 14px);
+  background: #ffffff;
+  border-radius: 6px;
+  border: 1px solid #d6dae3;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  min-width: 140px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(15, 20, 40, 0.08);
+}
+
+.card h3 {
+  font-size: 0.98rem;
+  margin-bottom: 6px;
+  color: #14182a;
+}
+
+.card p {
+  font-size: 0.82rem;
+  color: #5a6172;
+  flex: 1;
+}
+
+.card .mini-btn {
+  align-self: flex-start;
+  margin-top: 8px;
+  background: #2c5cff;
+  color: white;
+  border: none;
+  padding: 5px 12px;
+  font-size: 0.78rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* ---- 4) Flex Grow Uygulama — 20vh, 1-2-1 ---- */
+.flex-grow-section {
+  height: 20vh;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;            /* kutuların yüksekliği esnesin */
+  padding: 0 32px 18px;
+  gap: 14px;
+}
+
+.box {
+  border-radius: 6px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #14182a;
+}
+
+.box h3 {
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+.box span {
+  font-family: "Courier New", monospace;
+  font-size: 0.8rem;
+  color: #5a6172;
+}
+
+.box1 { flex-grow: 1; background: #cfdbf7; }
+.box2 { flex-grow: 2; background: #cfe9d5; }
+.box3 { flex-grow: 1; background: #f7dac5; }
+
+/* ---- 5) Footer — 10vh, center+center ---- */
+.footer {
+  height: 10vh;
+  background: #ffffff;
+  border-top: 1px solid #d6dae3;
+  display: flex;
+  justify-content: center;          /* yatayda ortala */
+  align-items: center;              /* dikeyde ortala */
+  font-size: 0.88rem;
+  color: #5a6172;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.footer a {
+  color: #2c5cff;
+  text-decoration: none;
+  margin-left: 12px;
+}
+.footer a:hover { text-decoration: underline; }
+
+/* küçük ekranlarda kartların 6 sığmaması durumunda wrap zaten devrede */
+@media (max-width: 760px) {
+  html, body { overflow: auto; }
+  .wrapper { height: auto; min-height: 100vh; }
+  .hero { flex-direction: column; height: auto; padding: 18px; }
+  .hero-image { min-height: 100px; }
+  .navbar nav { gap: 14px; }
+  .card { flex: 1 1 calc(33% - 10px); }
+  .flex-grow-section { flex-direction: column; height: auto; padding: 14px; }
+}

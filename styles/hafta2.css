@@ -1,0 +1,191 @@
+/* ==========================================================
+   Hafta 2 — HTML/CSS Uygulaması
+   Sadece HTML5 + CSS3, framework yok.
+   Zorunlu: 2+ hiyerarşik seçici, 1+ grup seçici
+   ========================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  background: #ecedf1;
+  color: #1c1f26;
+  padding: 40px 20px;
+  min-height: 100vh;
+}
+
+/* GROUP selector — applies to h1, h2 and p together */
+h1, h2, p {
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #f4f5f8;
+  padding: 30px 35px;
+  border-radius: 6px;
+  box-shadow: 0 8px 30px rgba(15, 20, 40, 0.06);
+}
+
+/* ---- Menu (yatay) ----
+   ul > li > a yapısı, display:inline-block ile yatay */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #d8dae0;
+}
+
+nav .title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #1c1f26;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-left: 4px;
+}
+
+/* HIERARCHICAL selector #1 — nav a */
+nav a {
+  display: inline-block;
+  padding: 7px 14px;
+  text-decoration: none;
+  color: #4a4f5c;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.92rem;
+  border-radius: 4px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+/* Hover efekti */
+nav a:hover {
+  background: #2c5cff;
+  color: #ffffff;
+}
+
+nav a.active {
+  background: #2c5cff;
+  color: #ffffff;
+}
+
+/* ---- Header ---- */
+header {
+  margin-bottom: 25px;
+}
+
+header h1 {
+  font-size: 1.55rem;
+  color: #14182a;
+  margin-bottom: 8px;
+}
+
+header p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: #4a4f5c;
+  text-align: left;
+}
+
+header p .hi {
+  color: #2c5cff;
+}
+
+/* ---- İki sütunlu içerik ----
+   display:inline-block ile yan yana */
+main {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.content,
+.aside {
+  flex: 1 1 280px;
+  padding: 20px 22px;
+  border-radius: 5px;
+  border: 1px solid #d8dae0;
+}
+
+.content {
+  background: #fbf6e7;
+}
+
+.aside {
+  background: #e9f1f7;
+}
+
+/* HIERARCHICAL selector #2 — .content p */
+.content h2,
+.aside h2 {
+  font-size: 1.15rem;
+  margin-bottom: 12px;
+  color: #14182a;
+}
+
+.content p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.92rem;
+  color: #3a3f4d;
+  line-height: 1.7;
+  text-align: justify;
+  margin-bottom: 12px;
+}
+
+/* HIERARCHICAL selector #3 — .aside p */
+.aside p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.92rem;
+  color: #2a3f5c;
+  line-height: 1.7;
+  text-align: left;
+  margin-bottom: 12px;
+}
+
+/* ---- Footer ---- */
+footer {
+  margin-top: 25px;
+  padding-top: 18px;
+  border-top: 1px solid #d8dae0;
+  text-align: center;
+}
+
+footer p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.85rem;
+  color: #6a6f7e;
+}
+
+/* Geri dön linki */
+.back {
+  display: inline-block;
+  margin-top: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.88rem;
+  color: #2c5cff;
+  text-decoration: none;
+}
+
+.back:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  nav { flex-direction: column; align-items: flex-start; gap: 10px; }
+  nav ul li { margin-left: 0; margin-right: 4px; }
+  .wrapper { padding: 20px; }
+}

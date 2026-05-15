@@ -1,0 +1,143 @@
+/* ==========================================================
+   Hafta 7 — Bootstrap + JavaScript
+   Sınırlı ek CSS — ana görünüm Bootstrap üzerinden kuruluyor.
+   ========================================================== */
+
+body {
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.navbar-brand-strong {
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.hero-section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.badge-soft {
+  font-weight: 600;
+  padding: 0.5em 0.9em;
+}
+
+.card-number {
+  display: inline-block;
+  background: #2c5cff;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.78rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  margin-bottom: 0.8rem;
+}
+
+.card-number.green  { background: #198754; }
+.card-number.yellow { background: #f0a900; color: #14182a; }
+
+/* Bilgi listesi sağ taraf */
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  font-size: 0.95rem;
+}
+.info-row:last-child { border-bottom: none; }
+.info-row .label { color: #4a4f5c; }
+
+/* Karşılaştırma kartları (Neden Katılmalısınız?) */
+.compare-card {
+  border-radius: 6px;
+  padding: 16px 18px;
+  height: 100%;
+}
+.compare-card h5 { margin-bottom: 6px; font-weight: 700; }
+.compare-card p { margin-bottom: 0; font-size: 0.92rem; color: #2f3645; }
+
+.cc-1 { background: #d6e7f7; }
+.cc-2 { background: #d8efde; }
+.cc-3 { background: #fde9c8; }
+.cc-4 { background: #d9efef; }
+
+/* Sonuç alanı */
+#sonucAlani .placeholder-alert {
+  background: #d4f1f5;
+  color: #1f4e57;
+  border: none;
+}
+
+/* ---------- DARK MODE ---------- */
+body.dark-mode {
+  background: #0e1116 !important;
+  color: #e2e6ee;
+}
+
+body.dark-mode .navbar.bg-light,
+body.dark-mode .bg-light {
+  background: #14181f !important;
+}
+
+body.dark-mode .navbar-light .navbar-brand,
+body.dark-mode .navbar-light .nav-link {
+  color: #e2e6ee !important;
+}
+
+body.dark-mode .navbar-light .nav-link:hover {
+  color: #80a8ff !important;
+}
+
+body.dark-mode .card,
+body.dark-mode .form-section,
+body.dark-mode .summary-section {
+  background: #1a1f29 !important;
+  color: #e2e6ee !important;
+  border-color: #2a313e !important;
+}
+
+body.dark-mode .text-secondary,
+body.dark-mode .text-muted {
+  color: #98a1b3 !important;
+}
+
+body.dark-mode .form-control,
+body.dark-mode .form-select {
+  background: #0e1116 !important;
+  color: #e2e6ee !important;
+  border-color: #2a313e !important;
+}
+
+body.dark-mode .form-control::placeholder { color: #6a7388; }
+
+body.dark-mode .info-row {
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+body.dark-mode .info-row .label { color: #98a1b3; }
+
+body.dark-mode .compare-card {
+  background: #1a1f29 !important;
+  color: #e2e6ee;
+  border: 1px solid #2a313e;
+}
+body.dark-mode .compare-card p { color: #b0b8cb; }
+
+body.dark-mode .btn-light,
+body.dark-mode .btn-outline-secondary {
+  background: #2a313e;
+  color: #e2e6ee;
+  border-color: #2a313e;
+}
+
+body.dark-mode footer { background: #0a0c10 !important; color: #98a1b3; }
+
+body.dark-mode #sonucAlani .placeholder-alert {
+  background: #1a2c30;
+  color: #9bdce3;
+}
+
+body.dark-mode .badge-soft.bg-light {
+  background: #2a313e !important;
+  color: #e2e6ee !important;
+}
