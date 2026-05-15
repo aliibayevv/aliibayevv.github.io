@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hafta 6 — JavaScript Uygulamaları</title>
+  <link rel="stylesheet" href="styles/hafta6.css" />
+</head>
+<body>
+
+  <a href="index.html" class="back-link">← Ana sayfaya geri dön</a>
+
+  <div class="page-head">
+    <h1>Hafta 6 · JavaScript Uygulamaları</h1>
+    <p>Öğrenci Not Hesaplama ve Birim Dönüştürücü</p>
+  </div>
+
+  <div class="apps">
+
+    <!-- Uygulama 1: Öğrenci Not Hesaplama -->
+    <section class="app">
+      <h2>Öğrenci Not Hesaplama</h2>
+
+      <div class="field">
+        <label for="adSoyad">Ad Soyad</label>
+        <input type="text" id="adSoyad" placeholder="Filiz Akın" />
+      </div>
+
+      <div class="field">
+        <label for="vize">Vize Notu (%40)</label>
+        <input type="text" id="vize" placeholder="0–100" />
+      </div>
+
+      <div class="field">
+        <label for="final">Final Notu (%60)</label>
+        <input type="text" id="final" placeholder="0–100" />
+      </div>
+
+      <button id="notHesaplaBtn">Hesapla</button>
+
+      <div id="notSonuc" class="result">
+        <span class="empty">Sonuç burada görünecek.</span>
+      </div>
+    </section>
+
+    <!-- Uygulama 2: Birim Dönüştürücü -->
+    <section class="app">
+      <h2>Birim Dönüştürücü</h2>
+
+      <div class="field">
+        <label for="deger">Değer Giriniz</label>
+        <input type="text" id="deger" placeholder="örn. 50" />
+      </div>
+
+      <div class="field">
+        <label for="donusumTipi">Dönüşüm Tipi</label>
+        <select id="donusumTipi">
+          <optgroup label="Sıcaklık">
+            <option value="c-f">Celsius → Fahrenheit</option>
+            <option value="f-c">Fahrenheit → Celsius</option>
+            <option value="c-k">Celsius → Kelvin</option>
+          </optgroup>
+          <optgroup label="Uzunluk">
+            <option value="m-km">Metre → Kilometre</option>
+            <option value="km-m">Kilometre → Metre</option>
+            <option value="km-mil">Kilometre → Mil</option>
+            <option value="mil-km">Mil → Kilometre</option>
+          </optgroup>
+          <optgroup label="Ağırlık">
+            <option value="kg-g">Kilogram → Gram</option>
+            <option value="g-kg">Gram → Kilogram</option>
+          </optgroup>
+        </select>
+      </div>
+
+      <button id="birimHesaplaBtn">Hesapla</button>
+
+      <div id="birimSonuc" class="result">
+        <span class="empty">Sonuç burada görünecek.</span>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="scripts/hafta6.js"></script>
+</body>
+</html>
